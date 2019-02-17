@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: eureka-server-8761
+  profiles: discovery1
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: discovery1
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl :
+      default-zone: http://discovery2:8762/eureka/,http://discovery1:8763/eureka/     
+
+---
+spring:
+  application:
+    name: eureka-server-8762
+  profiles: discovery2
+server:
+  port: 8762
+eureka:
+  instance:
+    hostname: discovery2
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      default-zone: http://discovery1:8761/eureka/,http://discovery1:8763/eureka/     
+      
+      
+      
+---
+spring:
+  application:
+    name: eureka-server-8763
+  profiles: discovery3
+server:
+  port: 8763
+eureka:
+  instance:
+    hostname: discovery3
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      default-zone: http://discovery1:8761/eureka/,http://discovery1:8762/eureka/     

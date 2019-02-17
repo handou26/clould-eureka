@@ -1,0 +1,26 @@
+EMERGENCY! EUREKA MAY BE INCORRECTLY CLAIMING INSTANCES ARE UP WHEN THEY'RE NOT. RENEWALS ARE LESSER THAN THRESHOLD AND HENCE THE INSTANCES ARE NOT BEING EXPIRED JUST TO BE SAFE
+
+
+
+
+
+
+
+
+java -jar eureka-server-0.0.1-SNAPSHOT.jar  > log.file 2>&1 &
+
+
+java -jar order-api-8090.jar  > log.file 2>&1 &
+
+
+
+
+
+
+
+zk和eureka 的区别（cap理论  consisency 一致性   a Availability 可用性  Partition tolerance  分区容错）
+
+zk 
+
+
+
