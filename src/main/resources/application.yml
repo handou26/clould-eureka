@@ -11,6 +11,6 @@ eureka:
     serviceUrl :
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
-    enable-self-preservation: false
+    enable-self-preservation: true  #自我保护机制
     
     
